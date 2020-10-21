@@ -32,14 +32,16 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtA = new System.Windows.Forms.TextBox();
+            this.txtB = new System.Windows.Forms.TextBox();
+            this.txtC = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtH = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,29 +75,32 @@
             this.checkBox3.Text = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtA
             // 
-            this.textBox1.Location = new System.Drawing.Point(481, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Основание";
+            this.txtA.Location = new System.Drawing.Point(481, 200);
+            this.txtA.Name = "txtA";
+            this.txtA.Size = new System.Drawing.Size(100, 20);
+            this.txtA.TabIndex = 4;
+            this.txtA.Text = "Основание";
+            this.txtA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxIsClicked);
             // 
-            // textBox2
+            // txtB
             // 
-            this.textBox2.Location = new System.Drawing.Point(481, 227);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "Сторона B";
+            this.txtB.Location = new System.Drawing.Point(481, 227);
+            this.txtB.Name = "txtB";
+            this.txtB.Size = new System.Drawing.Size(100, 20);
+            this.txtB.TabIndex = 5;
+            this.txtB.Text = "Сторона B";
+            this.txtB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxIsClicked);
             // 
-            // textBox3
+            // txtC
             // 
-            this.textBox3.Location = new System.Drawing.Point(481, 254);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "Сторона C";
+            this.txtC.Location = new System.Drawing.Point(481, 254);
+            this.txtC.Name = "txtC";
+            this.txtC.Size = new System.Drawing.Size(100, 20);
+            this.txtC.TabIndex = 6;
+            this.txtC.Text = "Сторона C";
+            this.txtC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxIsClicked);
             // 
             // pictureBox1
             // 
@@ -134,25 +139,48 @@
             this.button1.FlatAppearance.BorderSize = 5;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(481, 311);
+            this.button1.Location = new System.Drawing.Point(481, 322);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(232, 95);
+            this.button1.Size = new System.Drawing.Size(292, 95);
             this.button1.TabIndex = 10;
-            this.button1.Text = "Mouse2 Here";
+            this.button1.Text = "Другая форма";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button2.Location = new System.Drawing.Point(601, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(172, 101);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Построить треугольник";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // txtH
+            // 
+            this.txtH.Location = new System.Drawing.Point(481, 281);
+            this.txtH.Name = "txtH";
+            this.txtH.Size = new System.Drawing.Size(100, 20);
+            this.txtH.TabIndex = 12;
+            this.txtH.Text = "Высота";
+            this.txtH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxIsClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtH);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtC);
+            this.Controls.Add(this.txtB);
+            this.Controls.Add(this.txtA);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -169,14 +197,16 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.TextBox txtB;
+        private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtH;
     }
 }
 
