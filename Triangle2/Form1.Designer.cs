@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.txtA = new System.Windows.Forms.TextBox();
             this.txtB = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
@@ -42,6 +40,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtH = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,30 +50,11 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(326, 64);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.Size = new System.Drawing.Size(125, 17);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = "Теорема Пифагора";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(326, 88);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(80, 17);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(326, 112);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 2;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtA
             // 
@@ -117,6 +98,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(481, 64);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(292, 97);
@@ -168,11 +150,30 @@
             this.txtH.Text = "Высота";
             this.txtH.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TextBoxIsClicked);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(251, 160);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 141);
+            this.panel1.TabIndex = 13;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(251, 322);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 48);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "Нарисовать треугольник";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtH);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -181,8 +182,6 @@
             this.Controls.Add(this.txtC);
             this.Controls.Add(this.txtB);
             this.Controls.Add(this.txtA);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -195,8 +194,6 @@
         #endregion
 
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.TextBox txtA;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.TextBox txtC;
@@ -207,6 +204,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtH;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button3;
     }
 }
 

@@ -57,6 +57,7 @@ namespace Triangle2
             s = 0.5 * a * h;
             return s;
         }
+
         public double GetSetA
         {
             get
@@ -100,6 +101,45 @@ namespace Triangle2
                     return true;
                 else return false;
             }
+        }
+    }
+
+    class Triangle2
+    {
+        public double a;
+        public double b;
+        public Triangle2(double A, double B)
+        {
+            a = A;
+            b = B;
+        }
+        public string outputA()
+        {
+            return Convert.ToString(a);
+        }
+        public string outputB()
+        {
+            return Convert.ToString(b);
+        }
+        public double CSide()
+        {
+            double c = 0;
+            c = (a * a) + (b * b);
+            return c;
+        }
+        public double GetSetA
+        {
+            get
+            { return a; }
+            set
+            { a = value; }
+        }
+        public double GetSetB
+        {
+            get
+            { return b; }
+            set
+            { b = value; }
         }
     }
 }
