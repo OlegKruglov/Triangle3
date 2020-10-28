@@ -39,6 +39,7 @@ namespace Triangle2
             double b = 0;
             double c = 0;
             double h = 0;
+            listView1.Items.Clear();
 
             if (txtA.Text != "Основание" && txtB.Text != "Сторона 1" && txtC.Text != "Сторона 2" && txtH.Text != "Высота")
             {

@@ -123,8 +123,12 @@ namespace Triangle2
         }
         public double CSide()
         {
+            double pyth = 0;
+            double C = 0;
             double c = 0;
-            c = (a * a) + (b * b);
+            pyth = (a * a) + (b * b);
+            C = Math.Sqrt(pyth);
+            c = Math.Round(C);
             return c;
         }
         public double GetSetA
