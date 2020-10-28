@@ -37,7 +37,6 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtH = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -114,21 +113,6 @@
             // 
             this.columnHeader2.Text = "Значение";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.IndianRed;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 5;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button1.Location = new System.Drawing.Point(481, 322);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 95);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Другая форма";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
@@ -152,19 +136,20 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(251, 160);
+            this.panel1.Location = new System.Drawing.Point(251, 133);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 141);
             this.panel1.TabIndex = 13;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(251, 322);
+            this.button3.BackColor = System.Drawing.Color.LawnGreen;
+            this.button3.Location = new System.Drawing.Point(251, 281);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 48);
             this.button3.TabIndex = 14;
             this.button3.Text = "Нарисовать треугольник";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
@@ -176,7 +161,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtH);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtC);
@@ -201,7 +185,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtH;
         private System.Windows.Forms.Panel panel1;
